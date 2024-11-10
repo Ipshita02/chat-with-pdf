@@ -3,11 +3,8 @@
 import { useCallback, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import{
-    CheckCircleIcon,
     CircleArrowDown,
-    HammerIcon,
     RocketIcon,
-    SaveIcon,
 } from "lucide-react";
 import useUpload from '../hooks/useUpload';
 import { useRouter } from 'next/navigation';
@@ -24,15 +21,10 @@ function FileUploader() {
 
 
     const onDrop = useCallback(async (acceptedFiles: File[]) => {
-        // Do something with the files
-        // console.log("acceptedFiles", acceptedFiles);
 
         const file = acceptedFiles[0];
         if (!file) {
             await handleUpload(file)
-        } else {
-            // do nothing...
-            // toast...
         }
       }, []);
 
@@ -44,12 +36,8 @@ function FileUploader() {
             }
         });
         
-    // const uploadInProgress = progress !== null && progress >= 0 && progress <= 100;
-
     return (
-        <div className='flex flex-col gap-4 items-center max-w-7xl mx-auto'>
-            {/* Loading... tomorrow! */}
-            
+        <div className='flex flex-col gap-4 items-center max-w-7xl mx-auto'>            
             <div 
                 {...getRootProps()}
                 className={`p-10 border-2 border-dashed mt-10 w-[90%] border-indigo-600 text-indigo-600 

@@ -71,11 +71,6 @@ export default function Home() {
           <Button asChild className="mt-10"> 
             <Link href="/dashboard">Get Started</Link>
           </Button>
-
-          {/* <Button asChild style={{ borderRadius: '0.3rem' }} className="mt-10 bg-black text-white p-4 hover:bg-black">
-            <Link href="/dashboard">Get Started</Link>
-          </Button> */}
-
         </div>
 
         <div className="relative overflow-hidden pt-16">
